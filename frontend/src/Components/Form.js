@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 function Form()
 {
@@ -19,8 +20,12 @@ function Form()
             hobby: event.target.hobby.value,
             favoriteMovie: event.target.favoriteMovie.value
         };
-
         setForm(tempForm);
+
+        axios.post('https://httpbin.org/post', tempForm)
+            .then(res => console.log(res))
+            .catch(err => console.log(err))
+
         console.log(tempForm);
     }
 
