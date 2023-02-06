@@ -3,43 +3,72 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 60vh;
-    width: 30%;
-    margin: 0 auto;
-    background-color: white;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 30px;
+    height: 65vh;  /* height of the form container */
+    width: 80%;  /* initial width of the form container */
+    margin: 50px auto;  /* margin of the form container */
+    background-color: white;  /* background color of the form container */
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);  /* shadow effect on form container */
+    border-radius: 10px;  /* rounded border of the form container */
+    padding: 30px;  /* internal padding of the form container */
 }
 
 label {
-    font-size: 18px;
-    margin-bottom: 10px;
-    text-align: center;
+    margin-top: 20px;  /* margin between label and input elements */
 }
 
-input[type="text"], input[type="number"] {
-    margin-bottom: 20px;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid gray;
+input[type="text"],
+input[type="number"] {
+    width: 100%;  /* width of the input fields */
+    padding: 10px;  /* internal padding of the input fields */
+    margin-top: 10px;  /* margin between input elements */
+    border-radius: 5px;  /* border radius of the input fields */
+    border: none;  /* no border on the input fields */
+    font-size: 16px;  /* font size of the input fields */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);  /* shadow effect on the input fields */
 }
 
 button[type="submit"] {
-    background-color: blue;
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-    width: 40%;
+    width: 100%;  /* width of the submit button */
+    padding: 10px;  /* internal padding of the submit button */
+    margin-top: 20px;  /* margin between the submit button and input fields */
+    border-radius: 5px;  /* border radius of the submit button */
+    border: none;  /* no border on the submit button */
+    background-color: #4CAF50;  /* background color of the submit button */
+    color: white;  /* text color of the submit button */
+    font-size: 16px;  /* font size of the submit button */
+    cursor: pointer;  /* mouse cursor when hover over the submit button */
 }
 
-button[type="submit"]:hover {
-    background-color: lightblue;
+@media (max-width: 576px) {
+    form {
+        width: 90%;  /* width of the form container for small screens */
+    }
 }
+
+@media (min-width: 576px) and (max-width: 768px) {
+    form {
+        width: 60%;  /* width of the form container for medium screens */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    form {
+        width: 50%;  /* width of the form container for large screens */
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    form {
+        width: 40%;  /* width of the form container for extra large screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    form {
+        width: 30%;  /* width of the form container for maximum size screens */
+    }
+}
+
+
 
 
