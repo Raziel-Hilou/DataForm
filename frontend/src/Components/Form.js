@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "./Form.css";
+
 import axios from "axios";
 
 function Form()
